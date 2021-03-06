@@ -1,0 +1,31 @@
+.footer {
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__address {
+    font-size: 21px;
+    color: $black;
+    margin-bottom: 6px;
+    font-style: normal;
+  }
+
+  &__phone {
+    position: relative;
+
+    &-link {
+      font-size: 21px;
+
+      &::before {
+        content: url('../images/icons/footer-phone.png');
+        padding-right: 10px;
+      }
+    }
+  }
+}

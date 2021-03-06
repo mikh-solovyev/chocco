@@ -1,0 +1,8 @@
+.reviews__switcher {
+  display: flex;
+  justify-content: center;
+}
+.reviews____switcher-item {
+  width: 80px;
+  height: 80px;
+}

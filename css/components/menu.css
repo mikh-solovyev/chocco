@@ -1,0 +1,11 @@
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.menu__item {
+  margin-right: 27px;
+}
+.menu__item:last-child {
+  margin-right: 0;
+}

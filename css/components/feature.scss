@@ -1,0 +1,13 @@
+.feature {
+  display: flex;
+  margin-right: 44px;
+
+  &__icon {
+    min-width: 60px;
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+}
+

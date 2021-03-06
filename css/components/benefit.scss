@@ -1,0 +1,44 @@
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: url("../images/content/benefits/seporate.png");
+    position: absolute;
+    left: calc(100% - 20px);
+    top: 50px;
+  }
+
+  &:last-child::before {
+    content: none;
+  }
+
+
+  &__image-wrap {
+    background: #F2F5F4;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &__title {
+    font-size: 27px;
+    color: $black;
+    margin-bottom: 18px;
+  }
+}

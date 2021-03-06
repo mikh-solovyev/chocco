@@ -1,0 +1,21 @@
+.menu {
+  flex: 1;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-right: 28px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-size: $baseFontSize;
+    display: inline-block;
+  }
+}

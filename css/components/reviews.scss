@@ -1,0 +1,68 @@
+.reviews {
+
+  &__display {
+    background: #F8FAF9;
+    padding: 40px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: $white;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -65px;
+    }
+
+    &::after {
+      content: url("../images/bg/reviews-leaf.png");
+      position: absolute;
+      right: 0;
+      top: 4%;
+    }
+  }
+
+  &__display-inner {
+    display: flex;
+    justify-content: space-between;
+
+
+  }
+
+  &__avatar-image {
+    width: 253px;
+    height: 264px;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 22px 140px 10px 40px;
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 27px;
+    color: $black;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    line-height: 22px;
+  }
+
+  &__author {
+    color: $black;
+    font-weight: 500;
+  }
+
+  &__switcher {
+    display: flex;
+    justify-content: center;
+  }
+}

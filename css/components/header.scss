@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__logo {
+    margin-right: 40px;
+  }
+
+  &__phone {
+    position: relative;
+
+    &-link {
+      font-size: 22px;
+
+      &::before {
+        content: url('../images/icons/header-phone.png');
+        padding-right: 10px;
+      }
+    }
+  }
+}

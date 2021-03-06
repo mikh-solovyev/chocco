@@ -1,0 +1,14 @@
+.features {
+  display: flex;
+  flex-wrap: wrap;
+}
+.features__item {
+  display: flex;
+  margin-right: 60px;
+}
+.features__icon {
+  min-width: 60px;
+}
+.features__text {
+  font-size: 16px;
+}
