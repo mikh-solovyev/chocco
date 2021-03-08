@@ -103,7 +103,7 @@ ul li {
   margin-bottom: 50px;
 }
 .headline__title {
-  margin-bottom: 18px;
+  margin-bottom: 8px;
   color: #292929;
 }
 .headline__subtitle {
@@ -136,27 +136,29 @@ ul li {
   justify-content: space-between;
   height: 100%;
   padding-top: 20px;
-  padding-bottom: 20px;
-  background: url("../images/bg/chocco.png") right center/50% auto no-repeat;
+  padding-bottom: 50px;
+  background: url("../images/bg/chocco.png") right center/52% auto no-repeat;
 }
 .hero__text {
-  max-width: 45%;
+  max-width: 40%;
 }
 .hero__heading {
   margin-bottom: 17px;
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 57.6px;
 }
 .hero__description {
   font-size: 21px;
-  margin-bottom: 32px;
+  margin-bottom: 27px;
 }
 
 .header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 20px;
 }
 .header__logo {
   margin-right: 40px;
@@ -197,13 +199,14 @@ ul li {
 
 .feature {
   display: flex;
-  margin-right: 44px;
+  margin-right: 53px;
 }
 .feature__icon {
-  min-width: 60px;
+  min-width: 50px;
 }
 .feature__text {
   font-size: 16px;
+  line-height: 18px;
 }
 
 .benefits-section {
@@ -385,6 +388,7 @@ ul li {
 }
 .order-section__title {
   color: inherit;
+  margin-bottom: 54px;
 }
 
 .form {
@@ -399,7 +403,7 @@ ul li {
 }
 .form__row {
   display: flex;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 .form__row:last-child {
   margin-bottom: 0;
@@ -436,6 +440,9 @@ ul li {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 16px;
+}
+.form__controls_type_checkbox {
+  margin-bottom: 48px;
 }
 .form__btns {
   display: flex;

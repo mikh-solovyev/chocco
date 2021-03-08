@@ -1,13 +1,14 @@
 .feature {
   display: flex;
-  margin-right: 44px;
+  margin-right: 53px;
 
   &__icon {
-    min-width: 60px;
+    min-width: 50px;
   }
 
   &__text {
     font-size: 16px;
+    line-height: 18px;
   }
 }
 
