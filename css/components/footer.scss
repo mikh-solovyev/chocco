@@ -1,7 +1,7 @@
 .footer {
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   &__row {
     display: flex;
@@ -12,7 +12,6 @@
   &__address {
     font-size: 21px;
     color: $black;
-    margin-bottom: 6px;
     font-style: normal;
   }
 
@@ -24,7 +23,7 @@
 
       &::before {
         content: url('../images/icons/footer-phone.png');
-        padding-right: 10px;
+        padding-right: 6px;
       }
     }
   }

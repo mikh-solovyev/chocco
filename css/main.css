@@ -560,8 +560,8 @@ ul li {
 }
 
 .footer {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .footer__row {
   display: flex;
@@ -571,7 +571,6 @@ ul li {
 .footer__address {
   font-size: 21px;
   color: #292929;
-  margin-bottom: 6px;
   font-style: normal;
 }
 .footer__phone {
@@ -582,17 +581,23 @@ ul li {
 }
 .footer__phone-link::before {
   content: url("../images/icons/footer-phone.png");
-  padding-right: 10px;
+  padding-right: 6px;
 }
 
 .social {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  margin-top: 7px;
 }
 .social__item {
-  margin-right: 20px;
+  margin-right: 15px;
+  font-size: 0;
 }
 .social__item:last-child {
   margin-right: 0;
+}
+.social__image {
+  display: inline-block;
 }
 /*# sourceMappingURL=main.css.map */

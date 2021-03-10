@@ -1,12 +1,19 @@
 .social {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  margin-top: 7px;
 
   &__item {
-    margin-right: 20px;
+    margin-right: 15px;
+    font-size: 0;
 
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  &__image {
+    display: inline-block;
   }
 }
