@@ -57,6 +57,9 @@
   }
 
   &__avatar {
+
+    z-index: 10;
+
     @include tablet {
       margin-bottom: rem(18px);
     }
@@ -132,5 +135,6 @@
   &__switcher {
     display: flex;
     justify-content: center;
+    margin-bottom: rem(20px);
   }
 }

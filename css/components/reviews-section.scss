@@ -23,6 +23,11 @@
     position: absolute;
     left: -10px;
     bottom: -14%;
+
+    @include mobile {
+      left: -34px;
+      bottom: -13%;
+    }
   }
 
   &__title {
@@ -31,6 +36,10 @@
     @include mobile {
       margin-bottom: rem(20px);
     }
+  }
+
+  &__container {
+    z-index: 10;
   }
 
 

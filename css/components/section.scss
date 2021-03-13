@@ -1,9 +1,12 @@
 .section {
-  height: 100vh;
-  min-height: 650px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include mobile {
+    //height: auto; 
+  }
 
   &__title {
     font-size: $headerFontSize;

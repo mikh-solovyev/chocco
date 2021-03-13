@@ -33,13 +33,17 @@
     font-size: rem(21px);
     color: $black;
     font-style: normal;
+
+    @include mobile {
+      margin-bottom: rem(8px);
+    }
   }
 
   &__phone {
     position: relative;
 
     @include mobile {
-      margin-bottom: rem(10px);
+      margin-bottom: rem(6px);
     }
 
     &-icon {

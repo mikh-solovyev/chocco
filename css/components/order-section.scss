@@ -29,6 +29,8 @@
   &__title {
     color: inherit;
     margin-bottom: rem(54px);
+    position: relative;
+    z-index: 10;
 
     @include tablet {
       margin-bottom: rem(20px);

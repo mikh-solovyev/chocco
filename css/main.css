@@ -64,8 +64,7 @@ ul li {
 }
 
 .section {
-  height: 100vh;
-  min-height: 650px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,8 +147,7 @@ ul li {
 }
 
 .hero {
-  height: 100vh;
-  min-height: 650px;
+  min-height: 100vh;
   color: #ffffff;
   background: url("../images/bg/leaf.png") right bottom no-repeat;
   background-color: #61C4D9;
@@ -192,7 +190,7 @@ ul li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  min-height: 100vh;
   padding-top: 1.1111111111rem;
   padding-bottom: 2.7777777778rem;
   background: url("../images/bg/chocco.png") right center/52% auto no-repeat;
@@ -209,15 +207,19 @@ ul li {
 @media (max-width: 768px) {
   .hero__text {
     max-width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-bottom: 13%;
   }
   .hero__text::before {
-    content: url("../images/bg/chocco-full.png");
-    position: absolute;
-    bottom: 105%;
-    left: 50%;
-    transform: translateX(-50%);
+    content: "";
+    background: url("../images/bg/chocco-full.png") center center/contain no-repeat;
+    width: 17.5555555556rem;
+    height: 18.3333333333rem;
+    margin-bottom: 0.8888888889rem;
   }
 }
 @media (max-width: 480px) {
@@ -265,7 +267,6 @@ ul li {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.1111111111rem;
 }
 @media (max-width: 768px) {
   .header {
@@ -317,7 +318,6 @@ ul li {
 .menu__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 .menu__item {
   margin-right: 1.5555555556rem;
@@ -525,6 +525,12 @@ ul li {
   left: -10px;
   bottom: -14%;
 }
+@media (max-width: 480px) {
+  .reviews-section::after {
+    left: -34px;
+    bottom: -13%;
+  }
+}
 .reviews-section__title {
   margin-bottom: 1.7777777778rem;
 }
@@ -532,6 +538,9 @@ ul li {
   .reviews-section__title {
     margin-bottom: 1.1111111111rem;
   }
+}
+.reviews-section__container {
+  z-index: 10;
 }
 
 @media (max-width: 768px) {
@@ -589,6 +598,9 @@ ul li {
     flex-direction: column;
     align-items: center;
   }
+}
+.reviews__avatar {
+  z-index: 10;
 }
 @media (max-width: 768px) {
   .reviews__avatar {
@@ -665,6 +677,7 @@ ul li {
 .reviews__switcher {
   display: flex;
   justify-content: center;
+  margin-bottom: 1.1111111111rem;
 }
 
 .interactive-avatar {
@@ -727,6 +740,8 @@ ul li {
 .order-section__title {
   color: inherit;
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 10;
 }
 @media (max-width: 768px) {
   .order-section__title {
@@ -1021,12 +1036,17 @@ ul li {
   color: #292929;
   font-style: normal;
 }
+@media (max-width: 480px) {
+  .footer__address {
+    margin-bottom: 0.4444444444rem;
+  }
+}
 .footer__phone {
   position: relative;
 }
 @media (max-width: 480px) {
   .footer__phone {
-    margin-bottom: 0.5555555556rem;
+    margin-bottom: 0.3333333333rem;
   }
 }
 .footer__phone-icon {
@@ -1056,6 +1076,11 @@ ul li {
 .social__item {
   margin-right: 0.8333333333rem;
   font-size: 0;
+}
+@media (max-width: 480px) {
+  .social__item {
+    margin-right: 1rem;
+  }
 }
 .social__item:last-child {
   margin-right: 0;

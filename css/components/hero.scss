@@ -1,6 +1,5 @@
 .hero {
-  height: 100vh;
-  min-height: 650px;
+  min-height: 100vh;
   color: $white;
   background: url('../images/bg/leaf.png') right bottom no-repeat;
   background-color: $blue;
@@ -41,7 +40,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    min-height: 100vh;
     padding-top: rem(20px);
     padding-bottom: rem(50px);
     background: url('../images/bg/chocco.png') right center / 52% auto no-repeat;
@@ -57,15 +56,19 @@
 
     @include tablet {
       max-width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      margin-bottom: 13%;
 
       &::before {
-        content: url('../images/bg/chocco-full.png');
-        position: absolute;
-        bottom: 105%;
-        left: 50%;
-        transform: translateX(-50%);
+        content: "";
+        background: url('../images/bg/chocco-full.png') center center / contain no-repeat;
+        width: rem(316px);
+        height: rem(330px);
+        margin-bottom: rem(16px);
       }
     }
 
