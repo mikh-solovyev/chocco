@@ -2,10 +2,10 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 7px;
+  margin-top: rem(7px);
 
   &__item {
-    margin-right: 15px;
+    margin-right: rem(15px);
     font-size: 0;
 
     &:last-child {
@@ -13,7 +13,15 @@
     }
   }
 
-  &__image {
+  &__icon {
     display: inline-block;
+    width: 20px;
+    height: 20px;
+    fill: #B3B3B3;
+    transition: 0.3s;
+
+    &:hover {
+      fill: $black;
+    }
   }
 }

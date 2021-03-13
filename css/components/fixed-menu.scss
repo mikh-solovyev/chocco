@@ -1,9 +1,12 @@
 .fixed-menu {
-
   position: fixed;
   right: 3%;
   top: 50%;
   transform: translateY(-50%);
+
+  @include tablet {
+    display: none;
+  }
 
   &__list {
     display: flex;

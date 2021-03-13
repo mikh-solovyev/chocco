@@ -5,11 +5,22 @@
   text-align: center;
   position: relative;
 
+  @include mobile {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    margin-bottom: rem(15px);
+  }
+
   &::before {
     content: url("../images/content/benefits/seporate.png");
     position: absolute;
     left: calc(100% - 20px);
-    top: 50px;
+    top: rem(50px);
+
+    @include tablet {
+      content: none;
+    }
   }
 
   &:last-child::before {
@@ -19,11 +30,11 @@
 
   &__image-wrap {
     background: #F2F5F4;
-    width: 128px;
-    height: 128px;
+    width: rem(128px);
+    height: rem(128px);
     border-radius: 50%;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
     overflow: hidden;
   }
 
@@ -36,9 +47,35 @@
     margin: auto;
   }
 
+  &__image {
+    @include mobile {
+      margin-right: rem(10px);
+    }
+  }
+
+  &__text {
+    @include mobile {
+      padding-right: 10%;
+    }
+  }
+
   &__title {
-    font-size: 27px;
+    font-size: rem(27px);
     color: $black;
-    margin-bottom: 18px;
+    margin-bottom: rem(18px);
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    @include mobile {
+      margin-bottom: rem(10px);
+    }
+  }
+
+  &__description {
+    @include mobile {
+      line-height: rem(22px);
+    }
   }
 }

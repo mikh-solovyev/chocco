@@ -1,23 +1,40 @@
 .header {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
+
+  @include tablet {
+    padding: 0 rem(20px);
+  }
+
+  @include mobile {
+    padding: 0;
+  }
 
   &__logo {
-    margin-right: 40px;
+    margin-right: rem(40px);
   }
 
   &__phone {
     position: relative;
 
     &-link {
-      font-size: 22px;
+      font-size: rem(22px);
+      display: flex;
+      align-items: center;
+    }
 
-      &::before {
-        content: url('../images/icons/header-phone.png');
-        padding-right: 10px;
-      }
+    &-icon {
+      width: 24px;
+      height: 24px;
+      padding-right: rem(10px);
+      fill: #fff;
+    }
+
+    @include tablet {
+      display: none;
     }
   }
 }

@@ -9,8 +9,12 @@
     font-size: $headerFontSize;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: rem(60px);
     text-align: center;
     color: $black;
+
+    @include mobile {
+      font-size: rem(40px);
+    }
   }
 }

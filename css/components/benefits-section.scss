@@ -7,6 +7,14 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+
+    @include tablet {
+      top: 30%;
+    }
+
+    @include mobile {
+      content: none;
+    }
   }
 
   &::after {
@@ -14,5 +22,9 @@
     position: absolute;
     left: 0;
     bottom: -18%;
+
+    @include mobile {
+      content: none;
+    }
   }
 }

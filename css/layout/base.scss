@@ -1,22 +1,21 @@
-$blue: #61C4D9;
-$green: #497870;
-$darkGreen: #2E4E3F;
-$gray: #666666;
-$black: #292929;
-$white: #ffffff;
+html {
+  @include tablet {
+    font-size: $baseFontSize - 1px;
+  }
 
-$containerWidth: 960px;
-$baseFontSize: 18px;
-$headerFontSize: 48px;
+  @include mobile {
+    font-size: $baseFontSize - 2px;
+  }
+}
 
 html, body {
   height: 100%;
+  font-size: $baseFontSize;
+  font-weight: 400;
 }
 
 body {
   font-family: 'Alegreya Sans', Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: $baseFontSize;
   color: $gray;
   line-height: 1.42;
   margin: 0;

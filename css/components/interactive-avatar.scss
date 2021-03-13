@@ -1,12 +1,22 @@
 .interactive-avatar {
-  width: 80px;
-  height: 80px;
-  border: 6px solid transparent;
+  width: rem(74px);
+  height: rem(74px);
   border-radius: 50%;
   overflow: hidden;
+  margin-right: rem(6px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include mobile {
+    width: rem(64px);
+    height: rem(64px);
+    margin-right: rem(10px);
+  }
 
   &_active {
-    border-color: $green;
+    border: 6px solid $green;
   }
 
   &__link {

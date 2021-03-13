@@ -3,6 +3,14 @@
   background: url("../images/bg/reviews-decor-1.png") right 2% top 6% no-repeat;
   z-index: 10;
 
+  @include tablet {
+    background-position: right -4% top 6%;
+  }
+
+  @include mobile {
+    background-position: right -7% top 6%
+  }
+
   &::before {
     content: url("../images/bg/reviews-decor-3.png");
     position: absolute;
@@ -18,7 +26,11 @@
   }
 
   &__title {
-    margin-bottom: 32px;
+    margin-bottom: rem(32px);
+
+    @include mobile {
+      margin-bottom: rem(20px);
+    }
   }
 
 

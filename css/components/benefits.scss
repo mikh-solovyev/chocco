@@ -2,7 +2,15 @@
   display: flex;
   justify-content: space-between;
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   &__item {
     width: calc(100% / 3 - 20px);
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }
