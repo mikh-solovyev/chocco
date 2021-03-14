@@ -1,3 +1,9 @@
+html, body {
+  height: 100%;
+  font-size: $baseFontSize;
+  font-weight: 400;
+}
+
 html {
   @include tablet {
     font-size: $baseFontSize - 1px;
@@ -6,12 +12,6 @@ html {
   @include mobile {
     font-size: $baseFontSize - 2px;
   }
-}
-
-html, body {
-  height: 100%;
-  font-size: $baseFontSize;
-  font-weight: 400;
 }
 
 body {

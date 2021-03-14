@@ -28,10 +28,18 @@
     }
 
     &::after {
-      content: url("../images/bg/reviews-leaf.png");
+      content: "";
       position: absolute;
       right: 0;
-      top: 4%;
+      top: 2%;
+      background: url("../images/bg/reviews-leaf.png") right top / contain no-repeat;
+      width: rem(127px);
+      height: rem(167px);
+
+      @include mobile {
+        max-width: 127px;
+        width: 25%;
+      }
     }
 
     @include tablet {

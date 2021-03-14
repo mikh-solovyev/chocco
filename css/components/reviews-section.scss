@@ -8,25 +8,49 @@
   }
 
   @include mobile {
-    background-position: right -7% top 6%
+    background-position: right -7% top 0%
   }
 
   &::before {
-    content: url("../images/bg/reviews-decor-3.png");
+    content: "";
     position: absolute;
     left: 0;
-    bottom: -28%;
+    top: 100%;
+    transform: translateY(-60%);
+    width: rem(102px);
+    height: rem(321px);
+    background: url("../images/bg/reviews-decor-3.png") bottom left / contain no-repeat ;
+
+    @include tablet {
+      width: rem(90px);
+      height: rem(282px);
+    }
+
+    @include mobile {
+      width: rem(75px);
+      height: rem(235px);
+    }
   }
 
   &::after {
-    content: url("../images/bg/reviews-decor-2.png");
+    content: "";
     position: absolute;
     left: -10px;
-    bottom: -14%;
+    top: 100%;
+    transform: translateY(-50%);
+    width: rem(135px);
+    height: rem(193px);
+    background: url("../images/bg/reviews-decor-2.png") bottom left / contain no-repeat ;
+
+    @include tablet {
+      width: rem(118px);
+      height: rem(170px);
+    }
 
     @include mobile {
+      width: rem(122px);
+      height: rem(176px);
       left: -34px;
-      bottom: -13%;
     }
   }
 

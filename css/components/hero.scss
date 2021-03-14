@@ -85,12 +85,14 @@
     line-height: rem(57.6px);
 
     @include tablet {
+      font-size: rem(48px);
       margin-bottom: rem(4px);
     }
 
     @include mobile {
+      padding: 0 5%;
       font-size: rem(40px);
-      line-height: rem(36px);
+      line-height: rem(40px);
     }
 
 

@@ -11,5 +11,5 @@
 }
 
 @function rem($size) {
-  @return $size / $baseFontSize * 1rem;
+  @return $size / $baseFontSize + 0rem;
 }

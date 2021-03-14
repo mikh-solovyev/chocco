@@ -1,5 +1,6 @@
 .benefits-section {
   position: relative;
+  padding: rem(56px) 0;
 
   &::before {
     content: url("../images/bg/benefits-decor-1.png");
