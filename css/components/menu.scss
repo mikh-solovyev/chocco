@@ -22,4 +22,47 @@
     font-size: $baseFontSize;
     display: inline-block;
   }
+
+  &_type_hamburger {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #313131;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    & .menu__list {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & .menu__item {
+      margin-right: 0;
+      margin-bottom: rem(40px);
+    }
+
+    & .menu__link {
+      font-size: rem(36px);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+
+    &-icon {
+      fill: #fff;
+    }
+  }
+
+  &_active {
+    display: flex;
+  }
 }

@@ -1,0 +1,86 @@
+.structure {
+  position: relative;
+  width: rem(90px);
+  height: rem(90px);
+  background: #86C3D7;
+  border-radius: 4px;
+  color: $white;
+  cursor: pointer;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &::before {
+      position: absolute;
+      width: 100%;
+      height: 30px;
+      top: 100%;
+    }
+  }
+
+  &__icon {
+    fill: $white;
+    margin-bottom: rem(5px);
+  }
+
+  &__title {
+    font-size: rem(14px);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 270px;
+    color: $black;
+    background: rgba(255, 255, 255, 0.9);
+    padding: rem(18px) rem(14px);
+    border-radius: 4px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: rem(16px);
+    margin-bottom: rem(18px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    flex-grow: 1;
+    font-weight: 500;
+  }
+
+  &__item-picture {
+    width: 32px;
+    height: 32px;
+    margin-right: rem(10px);
+    display: flex;
+    align-items: center;
+  }
+
+  &__content:hover::before {
+    content: "";
+  }
+
+  &__content:hover > &__dropdown  {
+    display: flex;
+  }
+}
