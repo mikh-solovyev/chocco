@@ -15,7 +15,7 @@
 @import "components/menu";
 @import "components/features";
 @import "components/feature";
-@import "components/humburger";
+@import "components/hamburger";
 
 // benefits section
 @import "components/benefits-section";
@@ -27,6 +27,11 @@
 @import "components/sliders";
 @import "components/slide";
 @import "components/structure";
+
+// team section
+@import "components/team-section";
+@import "components/team";
+@import "components/member";
 
 //reviews section
 @import "components/reviews-section";
@@ -44,6 +49,9 @@
 
 // map section
 @import "components/contacts";
+
+//modal
+@import "components/modal";
 
 // footer
 @import "components/footer";

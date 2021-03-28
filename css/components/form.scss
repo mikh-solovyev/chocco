@@ -79,6 +79,10 @@
       }
     }
 
+    &_type_error {
+      border-color: #dd5357;
+    }
+
     &:focus {
       border-color: #DEE2BD;
     }
