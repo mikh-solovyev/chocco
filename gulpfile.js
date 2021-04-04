@@ -103,6 +103,5 @@ task(
 
 task(
     'build',
-    series('clean', parallel('copy:html', 'copy:image', 'copy:video', 'styles', 'scripts'),
-        parallel('watch', 'server'))
+    series('clean', parallel('copy:html', 'copy:image', 'copy:video', 'styles', 'scripts'))
 );
