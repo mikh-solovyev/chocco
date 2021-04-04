@@ -1,0 +1,115 @@
+.hero {
+  height: 100%;
+  color: $white;
+  background: url('../images/bg/leaf.png') right bottom no-repeat;
+  background-color: $blue;
+  position: relative;
+
+  @include tablet {
+    background-position: right bottom 68%;
+  }
+
+  @include mobile {
+    background-position: right bottom 75%;
+    background-size: 68%;
+  }
+
+  &::before {
+    content: url("../images/bg/hero-decor-1.png");
+    position: absolute;
+    right: 0%;
+    bottom: -8%;
+
+    @include tablet {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: url("../images/bg/hero-decor-2.png");
+    position: absolute;
+    left: 3%;
+    bottom: -6%;
+
+    @include tablet {
+      content: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-top: rem(20px);
+    padding-bottom: rem(50px);
+    background: url('../images/bg/chocco.png') right center / 52% auto no-repeat;
+
+    @include tablet {
+      background: none;
+    }
+  }
+
+  &__text {
+    position: relative;
+    max-width: 40%;
+
+    @include tablet {
+      max-width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      &::before {
+        content: "";
+        background: url('../images/bg/chocco-full.png') center center / contain no-repeat;
+        width: rem(316px);
+        height: rem(330px);
+        margin-bottom: rem(16px);
+      }
+    }
+
+    @include mobile {
+      margin-bottom: 2%;
+    }
+  }
+
+  &__heading {
+    margin-bottom: rem(17px);
+    font-size: rem(48px);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: rem(57.6px);
+
+    @include tablet {
+      font-size: rem(48px);
+      margin-bottom: rem(4px);
+    }
+
+    @include mobile {
+      padding: 0 5%;
+      font-size: rem(40px);
+      line-height: rem(40px);
+    }
+
+
+  }
+
+  &__description {
+    font-size: rem(21px);
+    margin-bottom: rem(27px);
+
+    @include tablet {
+      padding: 0 25%;
+      margin-bottom: rem(20px);
+    }
+
+    @include mobile {
+      padding: 0 16%;
+      font-size: rem(18px);
+    }
+  }
+}

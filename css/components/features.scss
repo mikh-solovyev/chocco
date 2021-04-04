@@ -1,8 +1,0 @@
-.features {
-    display: flex;
-    flex-wrap: wrap;
-
-    @include tablet {
-        display: none;
-    }
-}

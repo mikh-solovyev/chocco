@@ -1,0 +1,31 @@
+.benefits-section {
+  position: relative;
+  padding: rem(56px) 0;
+
+  &::before {
+    content: url("../images/bg/benefits-decor-1.png");
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include tablet {
+      top: 30%;
+    }
+
+    @include mobile {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: url("../images/bg/benefits-decor-2.png");
+    position: absolute;
+    left: 0;
+    bottom: -18%;
+
+    @include mobile {
+      content: none;
+    }
+  }
+}

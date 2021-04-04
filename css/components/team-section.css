@@ -1,6 +1,0 @@
-.team-section::before {
-  content: url(../images/bg/team-decor-1.png);
-  position: absolute;
-  right: 0;
-  top: -10%;
-}

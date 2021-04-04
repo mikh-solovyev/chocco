@@ -1,0 +1,15 @@
+@mixin tablet {
+  @media (max-width: #{$tabletBreakPoint}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobileBreakPoint}) {
+    @content;
+  }
+}
+
+@function rem($size) {
+  @return $size / $baseFontSize + 0rem;
+}
