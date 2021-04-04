@@ -33,10 +33,19 @@
 @import "components/team";
 @import "components/member";
 
+// products section
+@import "components/products";
+@import "components/product";
+
 //reviews section
 @import "components/reviews-section";
 @import "components/reviews";
 @import "components/interactive-avatar";
+
+// works section
+@import "components/works-section";
+@import "components/player";
+@import "components/controls";
 
 // form section
 @import "components/order-section";
@@ -54,6 +63,7 @@
 @import "components/modal";
 
 // footer
+@import "components/map";
 @import "components/footer";
 @import "components/social";
 

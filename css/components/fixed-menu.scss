@@ -36,4 +36,15 @@
     border-radius: 50%;
     background: $white;
   }
+
+
+  &_theme--dark &__item {
+    &_active {
+      border: 1px solid $black;
+    }
+  }
+
+  &_theme--dark &__link {
+    background: $black;
+  }
 }

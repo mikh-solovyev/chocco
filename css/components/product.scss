@@ -1,0 +1,76 @@
+.product {
+
+  &__link {
+    min-width: rem(100px);
+    position: relative;
+  }
+
+  &__title {
+    white-space: nowrap;
+    color: $white;
+    transform: rotate(-90deg);
+    transform-origin: left;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 0;
+    text-transform: none;
+  }
+
+  &__content {
+    max-width: 500px;
+    background: rgba(51, 53, 55, 0.9);
+    position: relative;
+    color: $white;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s;
+  }
+
+  &__text {
+    font-size: rem(16px);
+    line-height: rem(24px);
+    padding: rem(30px) rem(80px) rem(38px) rem(40px);
+  }
+
+  &__close {
+    fill: $white;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+  }
+
+
+  &_number--one &__link {
+    background: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/content/products/product_1.png") no-repeat center;
+    background-size: cover;
+  }
+
+  &_number--two &__link {
+    background: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/content/products/product_2.png") no-repeat center;
+    background-size: cover;
+  }
+
+  &_number--three &__link {
+    background: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/content/products/product_3.png") no-repeat center;
+    background-size: cover;
+  }
+
+  &:not(.active) {
+    @include mobile {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+  }
+
+  &.active &__link {
+    @include mobile {
+      transform: translateX(0) !important;
+    }
+  }
+
+
+}

@@ -59,6 +59,19 @@ ul li {
   list-style-type: none;
 }
 
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+  will-change: transform;
+}
+
 .container {
   width: 100%;
   max-width: 960px;
@@ -67,7 +80,7 @@ ul li {
 }
 
 .section {
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,7 +169,7 @@ ul li {
 }
 
 .hero {
-  min-height: 100vh;
+  height: 100%;
   color: #ffffff;
   background: url("../images/bg/leaf.png") right bottom no-repeat;
   background-color: #61C4D9;
@@ -1007,6 +1020,113 @@ ul li {
   border-bottom-color: #497870;
 }
 
+.products {
+  background: url("../images/bg/products-bg.png") no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  position: relative;
+  display: block;
+}
+.products__title {
+  text-align: left;
+  padding: 4% 7%;
+  color: #ffffff;
+}
+.products__list {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.products__item {
+  display: flex;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.products::before {
+  content: "";
+  background: url("../images/bg/products-decor-1.png") no-repeat;
+  background-size: 100%;
+  width: 5.7777777778rem;
+  height: 6.3333333333rem;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+@media (max-width: 480px) {
+  .products::before {
+    width: 4.9444444444rem;
+    height: 5.4444444444rem;
+  }
+}
+
+.product__link {
+  min-width: 5.5555555556rem;
+  position: relative;
+}
+.product__title {
+  white-space: nowrap;
+  color: #ffffff;
+  transform: rotate(-90deg);
+  transform-origin: left;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0;
+  text-transform: none;
+}
+.product__content {
+  max-width: 500px;
+  background: rgba(51, 53, 55, 0.9);
+  position: relative;
+  color: #ffffff;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+.product__text {
+  font-size: 0.8888888889rem;
+  line-height: 1.3333333333rem;
+  padding: 1.6666666667rem 4.4444444444rem 2.1111111111rem 2.2222222222rem;
+}
+.product__close {
+  fill: #ffffff;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+}
+.product_number--one .product__link {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/content/products/product_1.png") no-repeat center;
+  background-size: cover;
+}
+.product_number--two .product__link {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/content/products/product_2.png") no-repeat center;
+  background-size: cover;
+}
+.product_number--three .product__link {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/content/products/product_3.png") no-repeat center;
+  background-size: cover;
+}
+@media (max-width: 480px) {
+  .product:not(.active) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+}
+@media (max-width: 480px) {
+  .product.active .product__link {
+    transform: translateX(0) !important;
+  }
+}
+
 .reviews-section {
   position: relative;
   background: url("../images/bg/reviews-decor-1.png") right 2% top 6% no-repeat;
@@ -1273,6 +1393,205 @@ ul li {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.works-section {
+  position: relative;
+  background: #F8FAF9;
+}
+.works-section::before {
+  content: "";
+  background: url("../images/bg/works-decor-1.png") no-repeat;
+  background-size: contain;
+  width: 10.8888888889rem;
+  height: 14.6666666667rem;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.works-section__container {
+  position: relative;
+}
+.works-section__container::before {
+  content: "";
+  background: url("../images/bg/works-decor-list-top.png") no-repeat;
+  background-size: contain;
+  width: 5rem;
+  height: 4.2777777778rem;
+  position: absolute;
+  top: 10%;
+  right: 0;
+}
+@media (max-width: 768px) {
+  .works-section__container::before {
+    width: 3.3333333333rem;
+    height: 2.7777777778rem;
+  }
+}
+.works-section__container::after {
+  content: "";
+  background: url("../images/bg/works-decor-list-bottom.png") no-repeat;
+  background-size: contain;
+  width: 4rem;
+  height: 7.5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+@media (max-width: 768px) {
+  .works-section__container::after {
+    top: 70%;
+    width: 3.4444444444rem;
+    height: 6.4444444444rem;
+  }
+}
+@media (max-width: 480px) {
+  .works-section__container::after {
+    top: 90%;
+  }
+}
+
+.player__container {
+  width: 662px;
+  height: 392px;
+  margin: auto;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .player__container {
+    width: 80%;
+    height: auto;
+  }
+}
+.player__controls {
+  position: absolute;
+  bottom: 0;
+}
+.player__layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.3s;
+}
+.player__layer-icon {
+  fill: #ffffff;
+}
+@media (max-width: 768px) {
+  .player__layer-icon {
+    width: 68px;
+  }
+}
+@media (max-width: 480px) {
+  .player__layer-icon {
+    width: 45px;
+  }
+}
+.player.played .player__layer {
+  opacity: 0;
+}
+.player.played .controls__play-icon {
+  display: none;
+}
+.player.played .controls__pause-icon {
+  display: block;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 35px;
+  background: #404040;
+  align-items: center;
+  padding: 0 20px;
+  /* Special styling for WebKit/Blink */
+}
+.controls__wrap {
+  display: flex;
+  align-items: center;
+}
+.controls__play {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+}
+.controls__play-icon {
+  fill: #626262;
+}
+.controls__pause-icon {
+  fill: #626262;
+  display: none;
+}
+.controls__volume .controls__volume-icon_off {
+  display: none;
+}
+.controls__volume .controls__volume-icon_on {
+  display: block;
+}
+.controls__volume.muted .controls__volume-icon_on {
+  display: none;
+}
+.controls__volume.muted .controls__volume-icon_off {
+  display: block;
+}
+.controls__volume-icon {
+  fill: #626262;
+}
+.controls__wrap {
+  margin-right: 20px;
+}
+.controls__wrap:last-child {
+  margin-right: 0;
+}
+.controls__range {
+  width: 100%;
+}
+.controls__wrap_type--progress {
+  flex: 1;
+}
+.controls__wrap_type--volume {
+  width: 60px;
+}
+.controls__volume {
+  display: flex;
+}
+.controls__range {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  background: transparent;
+  /* Otherwise white in Chrome */
+}
+.controls__range::-webkit-slider-runnable-track {
+  background-color: #626262;
+  height: 6px;
+  border-radius: 3px;
+}
+.controls__range:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+.controls__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  background-color: #626262;
+  cursor: pointer;
+  margin-top: -5px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 }
 
 .order-section {
@@ -1561,11 +1880,17 @@ ul li {
   border-radius: 50%;
   background: #ffffff;
 }
+.fixed-menu_theme--dark .fixed-menu__item_active {
+  border: 1px solid #292929;
+}
+.fixed-menu_theme--dark .fixed-menu__link {
+  background: #292929;
+}
 
 .contacts {
   position: relative;
-  background: url("../images/map.png");
   background-size: cover;
+  padding: 0;
 }
 
 .modal {
@@ -1604,6 +1929,11 @@ ul li {
 .modal.active {
   opacity: 1;
   visibility: visible;
+}
+
+.map {
+  width: 100%;
+  height: 100vh;
 }
 
 .footer {

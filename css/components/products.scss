@@ -1,0 +1,48 @@
+.products {
+
+  background: url("../images/bg/products-bg.png") no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  position: relative;
+  display: block;
+
+  &__title {
+    text-align: left;
+    padding: 4% 7%;
+    color: $white;
+  }
+
+  &__list {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    display: flex;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    background: url("../images/bg/products-decor-1.png") no-repeat;
+    background-size: 100%;
+    width: rem(104px);
+    height: rem(114px);
+    position: absolute;
+    top: 0;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    @include mobile {
+      width: rem(89px);
+      height: rem(98px);
+    }
+  }
+}
